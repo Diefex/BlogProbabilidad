@@ -1,0 +1,746 @@
+﻿<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        Probabilidad
+    </title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/tema3.css">
+
+    <style>
+        .frac {
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            letter-spacing: 0.001em;
+            text-align: center;
+        }
+
+        .frac>span {
+            display: block;
+            padding: 0.1em;
+        }
+
+        .frac span.bottom {
+            border-top: thin solid black;
+        }
+
+        .frac span.symbol {
+            display: none;
+        }
+
+        .floating {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            visibility: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navMain">
+        <div class="container">
+            <a class="navbar-brand " href="#" onclick="showHome()"><b class="TextColorBackBlack">DISTRIBUCIONES DE VARIABLE DISCRETA</b></a>
+            <a class="navbar-brand " href="#" onclick="goHome()"><b class="TextColorBackBlack">Inicio</b></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle TextColorBackBlack" href="#" id="navbarDropdown"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <b class="TextColorBackBlack">Probabilidad</b>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#" onclick="goProbabilidad()">Probabilidad</a>
+                            <a class="dropdown-item" href="#" onclick="goEstadistica()">Estadistica</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" onclick="goTeoriaNumeros()">Teoria de numeros</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-primary my-2 my-sm-0 buscaBotonNoBorder" onclick="buscar()"
+                        type="submit"><b>Buscar</b></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <br />
+
+    <div class="container-fluid contenedor" style="height: 100%;">
+        <div class="row" style="height: 100%;">
+            <div class="col-sm-3 leftCol">
+                <br />
+
+                <ul class="list-group">
+                    <li class="list-group-item itemHover">
+                        <a>Distrubución Uniforme Discreta &darr;</a>
+                        <ul id="ul1" class="list-group">
+                            <li class="list-group-item itemHover" onclick="hider(1)" active>
+                                Definición y teorema
+                            </li>
+                            <li class="list-group-item itemHover" onclick="hider(2)">
+                                Ejemplos
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item itemHover">
+                        <a>Proceso de Bernoulli &darr;</a>
+                        <ul id="ul1" class="list-group">
+                            <li class="list-group-item itemHover" onclick="hider(3)" active>
+                                Definición y teorema
+                            </li>
+                            <li class="list-group-item itemHover" onclick="hider(4)">
+                                Ejemplos
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item itemHover">
+                        <a>Distribución Binomial &darr;</a>
+                        <ul class="list-group ">
+                            <li class="list-group-item itemHover" onclick="hider(5)">
+                                Definición y teorema
+                            </li>
+                            <li class="list-group-item itemHover" onclick="hider(6)">
+                                Ejemplos
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item itemHover">
+                        <a>Distribución Multinomial &darr;</a>
+                        <ul class="list-group ">
+                            <li class="list-group-item itemHover" onclick="hider(7)">
+                                Definición
+                            </li>
+                            <li class="list-group-item itemHover" onclick="hider(8)">
+                                Ejemplos
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item itemHover">
+                        <a>Distribución Hipergeómetrica &darr;</a>
+                        <ul id="ul1" class="list-group">
+                            <li class="list-group-item itemHover" onclick="hider(9)" active>
+                                Definición y teorema
+                            </li>
+                            <li class="list-group-item itemHover" onclick="hider(10)">
+                                Ejemplos
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item itemHover">
+                        <a>Distrubución Binomial Negativa &darr;</a>
+                        <ul id="ul1" class="list-group">
+                            <li class="list-group-item itemHover" onclick="hider(11)" active>
+                                Definición y teorema
+                            </li>
+                            <li class="list-group-item itemHover" onclick="hider(12)">
+                                Ejemplos
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-sm-9 rigthCol">
+                <div class="container">
+                    <br />
+                    <div class="row" id="home">
+                        <div class="col-sm-12">
+                            <div id="pageContent">
+                                <center>
+                                    <h1 class="display-3">Que es un espacio muestral?</h1>
+                                    <br>
+                                    <p>Antes de definir que es un espacio muestral debemos conocer dos conceptos: <b>observación</b> y <b>experimento</b><br><br>
+                                        Nos referiremos a cualquier registro de información, ya sea numérico o categórico, como una <b>observación</b>. <br><br>
+                                        Los estadísticos utilizan la palabra <b>experimento</b> para describir cualquier proceso que genere un conjunto de datos a partir de la observación. 
+                                        Estamos particularmente interesados en las observaciones que se obtienen por la repetición del experimento varias veces.<br>
+                                    </p>
+                                    <h3>Definición</h3>
+                                    <div class="border border-secondary p-2 rounded-lg"><p> El conjunto de todos los resultados posibles de un experimento estadístico se llama <b>espacio muestral</b> y se representa con el símbolo <b>S</b>. </p></div>
+                                    <img class="mt-5" src="../img/EspacioMuestral.png" alt="EspacioMuestral" style="max-width: 50%;max-height: 50%;display: block;">
+                                    tomado de: matematicas10.net
+                                    <img class="mt-5" src="../img/EspacioMuestral2.png" alt="EspacioMuestral" style="max-width: 50%;max-height: 50%;display: block;">
+                                    tomado de: matematicas10.net
+                                </center>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row" id="tema1">
+                        <div class="col-lg-12">
+                            <h1 class="display-3">Distribución Uniforme Discreta</h1>
+                            <br />
+                            <p>La más simple de todas las distribuciones de probabilidad discreta es aquella donde la variable
+                                aleatoria toma cada uno de sus valores con una probabilidad idéntica.
+                                Tal distribución de probabilidad se denomina <b>distribución uniforme discreta.</b></p>
+                            <br />
+                            <h3>Definición</h3>
+                                    <div class="border border-secondary p-2 rounded-lg"><p> Si la variable aleatoria X toma los valores x1, x2,...,xk, con idénticas probabilidades, entonces, la distribución uniforme discreta está dada por
+                                    </p>
+                                    <img src="../img/FDistUniforme.png" alt="Formula Dist Uniforme" data-toggle="tooltip" data-placement="right" title="Tomado de Probabilidad Walpole 8°">
+                                </div>
+                            <center>
+                                <img class="mt-5" src="../img/distUnifDiscreta.gif" alt="distUnifDiscreta" style="max-width: 50%;max-height: 50%;display: block;">
+                                tomado de: ub.edu
+                            </center>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(2)"><b
+                                    style="font-size: larger;">Siguiente: Ejemplos &rarr; </b></button>
+                        </div>
+                    </div>
+                    <div class="row" id="tema2">
+                        <div class="col-lg-12">
+                            <h1 class="display-3">Ejemplos De Distribución Uniforme Discreta</h1>
+                            <br />
+                            <h2>Ejemplos:</h2>
+                            <br />
+                            <ul>
+                                <li class="listaButtons">
+                                    <button class="btn btn-secondary" data-toggle="modal" data-target="#ejemplo11"><b
+                                            style="font-size: larger;">ejemplo 1 &rarr;</b></button>
+                                </li>
+                            </ul>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(1)"><b
+                                    style="font-size: larger;">&larr; Anterior: Definición </b></button>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(3)"><b
+                                    style="font-size: larger;">Siguiente: Proceso de Bernoulli &rarr; </b></button>
+                        </div>
+                    </div>
+                    <div class="row" id="tema3">
+                        <div class="col-lg-12">
+                            <h1 class="display-3">Proceso de Bernoulli</h1>
+                            <br />
+                            <h2>Definición:</h2>
+                            <br />
+                            <p>Estrictamente hablando, el proceso de Bernoulli debe tener las siguientes propiedades: 1. El
+                                experimento
+                                consiste en n ensayos que se repiten. 2. Cada ensayo produce un resultado que se puede clasiﬁ car como
+                                éxito
+                                o fracaso. 3. La probabilidad de un éxito, que se denota con p, permanece constante de un ensayo a otro.
+                                4.
+                                Los ensayos que se repiten son independientes</p>
+                                <br />
+                                <center>
+                                    <img class="mt-5" src="../img/Bernoulli.jpg" alt="Bernoulli" style="max-width: 50%;max-height: 50%;display: block;">
+                                    tomado de: wikipedia.org
+                                    <img class="mt-5" src="../img/Bernoulli.gif" alt="PrBernoulli" style="max-width: 50%;max-height: 50%;display: block;">
+                                    tomado de: todomatematicas.es
+                                </center>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(1)"><b
+                                    style="font-size: larger;">&larr; Anterior: Distribución Uniforme Discreta </b></button>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(4)"><b
+                                    style="font-size: larger;">Siguiente: Ejemplos &rarr; </b></button>
+                        </div>
+                    </div>
+                    <div class="row" id="tema4">
+                        <div class="col-lg-12">
+                            <h1 class="display-3">Ejemplos del Proceso de Bernoulli</h1>
+                            <br />
+                            <h2>Ejemplos:</h2>
+                            <br />
+                            <ul>
+                                <li class="listaButtons">
+                                    <button class="btn btn-secondary" data-toggle="modal" data-target="#ejemplo21"><b
+                                            style="font-size: larger;">ejemplo 1 &rarr;</b></button>
+                                </li>
+                            </ul>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(3)"><b
+                                    style="font-size: larger;">&larr; Anterior: Definición </b></button>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(5)"><b
+                                    style="font-size: larger;">Siguiente: Distribución Binomial &rarr; </b></button>
+                        </div>
+                    </div>
+                    <div class="row" id="tema5">
+                        <div class="col-lg-12">
+                            <h1 class="display-3">Distribución Binomial</h1>
+                            <br />
+                            <h2>Definición:</h2>
+                            <br />
+                            <p>La distribución binomial deriva su nombre del hecho de que los n + 1 términos en la expansión binomial
+                                de
+                                (q + p)n corresponden a los diversos valores de b(x; n, p) para x = 0, 1, 2,...,n</p>
+                                <br />
+                                <center>
+                                    <img class="mt-5" src="../img/Binomial.jpg" alt="Binomial" style="max-width: 50%;max-height: 50%;display: block;">
+                                    tomado de: fisicaymates.com
+                                </center>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(3)"><b
+                                    style="font-size: larger;">&larr; Anterior: Proceso de Bernoulli</b></button>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(6)"><b
+                                    style="font-size: larger;">Siguiente: Ejemplos &rarr; </b></button>
+                        </div>
+                    </div>
+                    <div class="row" id="tema6">
+                        <div class="col-lg-12">
+                            <h1 class="display-3">Ejemplos de Distribución Binomial</h1>
+                            <br />
+                            <h2>Ejemplos:</h2>
+                            <br />
+                            <ul>
+                                <li class="listaButtons">
+                                    <button class="btn btn-secondary" data-toggle="modal" data-target="#ejemplo31"><b
+                                            style="font-size: larger;">ejemplo 1 &rarr;</b></button>
+                                </li>
+                            </ul>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(5)"><b
+                                    style="font-size: larger;">&larr; Anterior: Definición </b></button>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(7)"><b
+                                    style="font-size: larger;">Siguiente: Distribución Multinomial &rarr; </b></button>
+                        </div>
+                    </div>
+                    <div class="row" id="tema7">
+                        <div class="col-lg-12">
+                            <h1 class="display-3">Distribución Multinomial<h1>
+                                <p>El experimento binomial se convierte en un experimento multinomial si cada prueba tiene más de dos
+                                    resultados posibles. Por ello, la clasiﬁ cación de un producto fabricado como ligero, pesado o
+                                    aceptable,
+                                    y
+                                    el registro de los accidentes en cierto
+                                    crucero de acuerdo con el día de la semana, constituyen experimentos multinomiales. Extraer una carta de
+                                    una
+                                    baraja con reemplazo también es un experimento multinomial si los 4 palos son los resultados de interés.
+                                  </p>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(5)"><b
+                                    style="font-size: larger;">&larr; Anterior: Distrubución Binomial</b></button>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(8)"><b
+                                    style="font-size: larger;">Siguiente: Ejemplos &rarr; </b></button>
+                        </div>
+                    </div>
+                    <div class="row" id="tema8">
+                        <div class="col-lg-12">
+                            <h1 class="display-3">Ejemplos de Distribución Multinomial<h1>
+                                <br />
+                                <h2>Ejemplos:</h2>
+                                <br />
+                                <ul>
+                                    <li class="listaButtons">
+                                        <button class="btn btn-secondary" data-toggle="modal" data-target="#ejemplo31"><b
+                                                style="font-size: larger;">ejemplo 1 &rarr;</b></button>
+                                    </li>
+                                </ul>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(7)"><b
+                                    style="font-size: larger;">&larr; Anterior: Definición</b></button>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(9)"><b
+                                    style="font-size: larger;">Siguiente: Distrubución Hipergeómetrica &rarr; </b></button>
+                        </div>
+                    </div>
+                    <div class="row" id="tema9">
+                        <div class="col-lg-12">
+                            <h1 class="display-3">Distribución Hipergeómetrica<h1>
+                                <p>La manera más simple de ver la diferencia entre la distribución binomial de la sección 5.3 y la
+                                    distribución hipergeométrica está en la forma en que se realiza el muestreo. Los tipos de aplicaciones
+                                    de
+                                    la
+                                    distribución hipergeométrica son muy similares a los de la distribución binomial. Nos interesamos en el
+                                    cálculo de probabilidades para el número de observaciones que caen en una categoría especíﬁca</p>
+                                  <p>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(7)"><b
+                                    style="font-size: larger;">&larr; Anterior: Distrubución Multinomial</b></button>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(10)"><b
+                                    style="font-size: larger;">Siguiente: Ejemplos &rarr; </b></button>
+                        </div>
+                    </div>
+                    <div class="row" id="tema10">
+                        <div class="col-lg-12">
+                            <h1 class="display-3">Ejemplos de Distribución Hipergeómetrica<h1>
+                                <br />
+                                <h2>Ejemplos:</h2>
+                                <br />
+                                <ul>
+                                    <li class="listaButtons">
+                                        <button class="btn btn-secondary" data-toggle="modal" data-target="#ejemplo31"><b
+                                                style="font-size: larger;">ejemplo 1 &rarr;</b></button>
+                                    </li>
+                                </ul>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(9)"><b
+                                    style="font-size: larger;">&larr; Anterior: Definición</b></button>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(11)"><b
+                                    style="font-size: larger;">Siguiente: Distrubución Binomial Negativa &rarr; </b></button>
+                        </div>
+                    </div>
+                    <div class="row" id="tema11">
+                        <div class="col-lg-12">
+                            <h1 class="display-3">Distribución Binomial Negativa<h1>
+                                <p>El número X de pruebas que genera k éxitos en un experimento binomial negativo se llama variable
+                                    aleatoria
+                                    binomial negativa y su distribución de probabilidad se llama distribución binomial negativa.</p>
+                                  <p>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(9)"><b
+                                    style="font-size: larger;">&larr; Anterior: Distrubución hipergeométrica<b></button>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(12)"><b
+                                    style="font-size: larger;">Siguiente: Ejemplos &rarr; </b></button>
+                        </div>
+                    </div>
+                    <div class="row" id="tema12">
+                        <div class="col-lg-12">
+                            <h1 class="display-3">Ejemplos de Distribución Binomial Negativa<h1>
+                                <br />
+                                <h2>Ejemplos:</h2>
+                                <br />
+                                <ul>
+                                    <li class="listaButtons">
+                                        <button class="btn btn-secondary" data-toggle="modal" data-target="#ejemplo31"><b
+                                                style="font-size: larger;">ejemplo 1 &rarr;</b></button>
+                                    </li>
+                                </ul>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(11)"><b
+                                    style="font-size: larger;">&larr; Anterior: Definición</b></button>
+                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(13)"><b
+                                    style="font-size: larger;">Siguiente: None &rarr; </b></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div id="modals">
+        <div class="modal" id="ejemplo11">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Probabilidad condicional - ejemplo 1</h2>
+                        <br>
+
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body" style="text-align: justify; font-size: large;">
+                        Ejemplo 1.1 basado en el ejercicio propuesto 2.81 pagina 65 del libro Probabilidad y estadística
+                        para
+                        ingeniería y ciencias de Ronald E. Walpole,Raymond H. Myers,Sharon L. Myers,Keying Ye -
+                        editorial pearson octava edición 2007
+                        <hr>
+                        El reconocido personaje de artes marciales Son Goku se ha enfrentado a múltiples batallas con el
+                        fin de proteger el planeta tierra. Si se sabe que la probabilidad que Goku tiene de vencer a
+                        Freezer es de
+
+                        <input type="text" value="0.83 " style="width: 40px;"
+                            onchange="var a= this.value; $('tej11-1').each(function(i){this.textContent = a}); calculoEj11()"
+                            autocomplete="off" />
+
+                        mientras que la probabilidad de vencer a Cell es de
+
+                        <input type="text" value="0.77" style="width: 40px;"
+                            onchange="var a= this.value; $('tej11-2').each(function(i){this.textContent = a}); calculoEj11()"
+                            autocomplete="off" />
+                        , y además la
+                        probabilidad que tiene de derrotar a ambos oponentes es de
+                        <input type="text" value="0.75" style="width: 40px;"
+                            onchange="var a= this.value; $('tej11-3').each(function(i){this.textContent = a}); calculoEj11()"
+                            autocomplete="off" />
+                        . ¿Cuál es la probabilidad de que
+                        Goku venza a Cell dado que derrotó primero a Freezer?
+                        Para este problema es necesario definir dos eventos:
+                        <br />
+                        A: Probabilidad de que Goku venza a Freezer.
+                        <br />
+                        B: Probabilidad de que Goku venza a Cell.
+                        <hr>
+                        Teniendo en cuenta lo anterior ya conocemos la probabilidad de los eventos A y B:
+                        <br />
+                        P(A)=<tej11-1>0.83</tej11-1>
+                        <br />
+                        P(B)=<tej11-2>0.77</tej11-2>
+                        <br />
+                        Además se tiene la probabilidad de que derrote a ambos oponentes, es decir la intersección:
+                        <br />
+                        P(A&#8745;B)=<tej11-3>0.75</tej11-3>
+                        <br />
+                        Con base al enunciado se sabe que se está haciendo uso de una probabilidad condicional, puesto
+                        que se quiere saber cual es la probabilidad de que Goku venza a Cell dado que venció a Freezer
+                        primero, haciendo uso del teorema descrito en la sección anterior.
+                        <br />
+                        <b>
+                            P(B/A)=<div class="frac">
+                                <span>P(B&#8745;A)</span>
+                                <span class="symbol">/</span>
+                                <span class="bottom">P(A)</span>
+                            </div>
+                        </b>
+                        <br />
+                        P(B/A)=<div class="frac">
+                            <tej11-3>0.75</tej11-3>
+                            <span class="symbol">/</span>
+                            <span class="bottom">
+                                <tej11-1>0.83</tej11-1>
+                            </span>
+
+                        </div>
+                        <br />
+                        P(B/A)=<res11-1>0.90</res11-1>
+                        <br />
+                        <hr>
+                        <h3>Conclusión:</h3>
+                        Es decir que la probabilidad que tiene Goku de vencer a Cell dado que derrotó a Freezer primero
+                        es de 0.90, lo cual se aproxima considerablemente a la saga de Dragon Ball Z.
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <div class="floating">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                            <br>
+                            <br>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal"
+                                data-target="#ejemplo12">Ejemplo 2</button>
+                        </div>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal"
+                            data-target="#ejemplo12">Ejemplo 2</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="ejemplo21">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Proceso de Bernoulli - Ejemplo 1</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        basado en un ejercicio propuesto por Angelica Zavala y que se puede encontrar <a href="https://prezi.com/xfuncujnbdix/proceso-de-bernoulli/">aqui</a>
+                        <hr>
+                        Se sabe que en una estación de Transmilenio 
+                        <input type="text" value="60" style="width: 40px;"
+                            onchange="var a= this.value; $('tej21-1').each(function(i){this.textContent = a/100}); calculoEj21()"
+                            autocomplete="off" onkeyup="this.value=this.value.replace(/[^\d.]/,'')" />
+                        de cada
+                        <input type="text" value="30" style="width: 40px;"
+                            onchange="var a= this.value; $('tej21-2').each(function(i){this.textContent = a/100}); calculoEj21()"
+                            autocomplete="off" onkeyup="this.value=this.value.replace(/[^\d.]/,'')" />
+                        personas viajan por trabajo, las demás lo hacen por diversión. Se tiene una muestra de 
+                        <input type="text" value="10" style="width: 40px;"
+                            onchange="var a= this.value; $('tej21-3').each(function(i){this.textContent = a/100}); calculoEj21()"
+                            autocomplete="off" onkeyup="this.value=this.value.replace(/[^\d.]/,'')" />
+                        personas cuales quiera y se necesita encontrar la probabilidad de encontrar entre la muestra
+                        <input type="text" value="10" style="width: 40px;"
+                            onchange="var a= this.value; $('tej21-3').each(function(i){this.textContent = a/100}); calculoEj21()"
+                            autocomplete="off" onkeyup="this.value=this.value.replace(/[^\d.]/,'')" />
+                        personas que viajen por trabajo.
+                        <br>
+                        Sabemos que las respuestas son: <br>
+                        -si viaja por trabajo (éxito) <br>
+                        -no viaja por trabajo (fracaso) <br>
+                        y que la respuesta de una persona no influye en la siguiente persona encuestada. <br><br>
+                        Entonces tenemos: <br><br>
+
+                        <center>
+                            X=40 <br>
+                            n=70 <br>
+                            p=12/15 <br>
+                            q=3/15 <br><br>
+                            <img src="../img/EjBernoulli1.png" alt="EjBernoulli1">
+                        </center>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal"
+                            data-target="#ejemplo22">Ejemplo 2</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="ejemplo31">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Teorema de bayes - ejemplo 1</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body" style="overflow: auto;">
+                        Ejemplo 2.1 - autoría propia
+                        <hr>
+                        El famoso juego de Pokémon Go distribuye en una zona pokemones de tipo fuego, agua y planta, En
+                        esta zona la probabilidad de obtener un pokémon de tipo fuego, agua o planta es de
+                        <input type="text" value="30" style="width: 40px;"
+                            onchange="var a= this.value; $('tej31-1').each(function(i){this.textContent = a/100}); calculoEj31()"
+                            autocomplete="off" onkeyup="this.value=this.value.replace(/[^\d.]/,'')" />%
+                        ,
+                        <input type="text" value="20" style="width: 40px;"
+                            onchange="var a= this.value; $('tej31-2').each(function(i){this.textContent = a/100}); calculoEj31()"
+                            autocomplete="off" onkeyup="this.value=this.value.replace(/[^\d.]/,'')" />%
+                        y
+                        <input type="text" value="50" style="width: 40px;"
+                            onchange="var a= this.value; $('tej31-3').each(function(i){this.textContent = a/100}); calculoEj31()"
+                            autocomplete="off" onkeyup="this.value=this.value.replace(/[^\d.]/,'')" />%
+                        respectivamente.
+                        <br>
+                        <b>P(T1)=<tej31-1>0.30</tej31-1>, P(T2)=<tej31-2>0.20</tej31-2>, P(T3)=<tej31-3>0.50</tej31-3>
+                            .</b>
+                        <br>
+                        La posibilidad de que un pokémon salga repetido según su tipo es de:
+                        <br>
+                        <b>
+                            P(R|T1)=<tej31-4>0.1</tej31-4>, <tej31-5>0.3</tej31-5>, P(R|T3)=<tej31-6>0.2</tej31-6>.
+                        </b>
+                        <br>
+                        Si en medio de la partida aparece un pokémon salvaje, repetido, que probabilidad hay de que sea
+                        tipo fuego, agua o planta:
+
+                        <br>
+                        <hr>
+                        Aplicamos el teorema de bayes para cada caso:
+                        <hr>
+                        <br>
+                        1. de que salga un pokemón tipo fuego
+                        <br>
+                        P(T1|R)=<div class="frac">
+                            <span>P(T1)P(R|T1)</span>
+                            <span class="symbol">/</span>
+                            <span class="bottom">P(T1)P(R|T1)+P(T2)P(R|T2)+P(T3)P(R|T3)</span>
+                        </div>
+                        <br>
+                        <br>
+                        P(T1|R)=<div class="frac">
+                            <span>(<tej31-1>0.30</tej31-1>)(<tej31-4>0.1</tej31-4>)</span>
+                            <span class="symbol">/</span>
+                            <span class="bottom">(<tej31-1>0.30</tej31-1>)(<tej31-4>0.1</tej31-4>)(<tej31-2>0.20
+                                </tej31-2>+<tej31-5>0.3</tej31-5>)+(<tej31-3>0.50</tej31-3>)(<tej31-6>0.2</tej31-6>
+                                )</span>
+                        </div>
+                        <br>
+                        <br>
+                        P(T1|R)=<div class="frac">
+                            <span>0.03</span>
+                            <span class="symbol">/</span>
+                            <span class="bottom">
+                                <tej31-7>0.19</tej31-7>
+                            </span>
+                        </div>
+                        <br><b>
+                            P(T1|R)=<tej31-r1>0.158</tej31-r1>=<tej31-r2>15.8</tej31-r2>% (probabilidad de que sea un
+                            pokemón tipo fuego)</b>
+                        <br>
+                        <hr>
+                        2. de que salga un pokemón tipo agua
+                        <br>
+                        P(T1|R)=<div class="frac">
+                            <span>P(T1)P(R|T1)</span>
+                            <span class="symbol">/</span>
+                            <span class="bottom">P(T1)P(R|T1)+P(T2)P(R|T2)+P(T3)P(R|T3)</span>
+                        </div>
+                        <br>
+                        <br>
+                        P(T1|R)=<div class="frac">
+                            <span>(<tej31-2>0.20</tej31-2>)(<tej31-5>0.03</tej31-5>)</span>
+                            <span class="symbol">/</span>
+                            <span class="bottom">
+                                <tej31-7>0.19</tej31-7>
+                            </span>
+                        </div>
+                        <br>
+                        <br><b>
+                            P(T1|R)=<tej31-r3>0.316</tej31-r3>=<tej31-r4>31.6</tej31-r4>% (probabilidad de que sea un
+                            pokemón tipo agua)</b>
+                        <hr>
+                        3. de que salga un pokemón tipo planta
+                        <br>
+                        P(T1|R)=<div class="frac">
+                            <span>P(T1)P(R|T1)</span>
+                            <span class="symbol">/</span>
+                            <span class="bottom">P(T1)P(R|T1)+P(T2)P(R|T2)+P(T3)P(R|T3)</span>
+                        </div>
+                        <br>
+                        <br>
+                        P(T1|R)=<div class="frac">
+                            <span>(<tej31-3>0.50</tej31-3>)(<tej31-6>0.02</tej31-6>)</span>
+                            <span class="symbol">/</span>
+                            <span class="bottom">
+                                <tej31-7>0.19</tej31-7>
+                            </span>
+                        </div>
+                        <br>
+                        <br><b>
+                            P(T1|R)=<tej31-r5>0.526</tej31-r5>=<tej31-r6>52.6</tej31-r6>% (probabilidad de que sea un
+                            pokemón tipo agua)</b>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal"
+                            data-target="#ejemplo11">Ejemplo 1</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal"
+                            data-target="#ejemplo13">Ejemplo 3</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<footer class="page-footer font-small blue">
+
+        <div class="footer-copyright text-center py-3">
+            <b>© 2020 Carlos Lopez</b>
+
+        </div>
+
+    </footer>-->
+
+    <script src="../js/jQuery.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/blogs.js"></script>
+
+    <script>
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+        function calculoEj11() {
+            $("res11-1")[0].textContent = (Number($("tej11-3")[0].textContent) / Number($("tej11-1")[0].textContent)).toFixed(2);
+        }
+
+        function calculoEj21() {
+            if ((Number($("tej21-1")[0].textContent) + Number($("tej21-2")[0].textContent) + Number($("tej21-3")[0].textContent)).toFixed(2) != 1) {
+                alert("la suma de los campos debe ser 100%");
+            } else {
+                var res = 0;
+                for (var i = 1; i <= 3; i++) {
+                    res += Number($("tej21-" + i)[0].textContent) * Number($("tej21-" + (i + 3))[0].textContent);
+                }
+                $("tej21-r1")[0].textContent = res;
+                $("tej21-r2")[0].textContent = (res * 100);
+            }
+
+        }
+
+        function calculoEj31() {
+            if ((Number($("tej31-1")[0].textContent) + Number($("tej31-2")[0].textContent) + Number($("tej31-3")[0].textContent)).toFixed(2) != 1) {
+                alert("la suma de los campos debe ser 100%");
+            } else {
+                var probTotal = 0;
+                for (var i = 1; i <= 3; i++) {
+                    probTotal += Number($("tej31-" + i)[0].textContent) * Number($("tej31-" + (i + 3))[0].textContent);
+                }
+                $("tej31-7")[0].textContent = probTotal;
+                $("tej31-r1")[0].textContent = (Number($("tej31-1")[0].textContent) * Number($("tej31-4")[0].textContent) / probTotal).toFixed(3);
+                $("tej31-r2")[0].textContent = (Number($("tej31-1")[0].textContent) * Number($("tej31-4")[0].textContent) / probTotal).toFixed(3) * 100;
+                $("tej31-r3")[0].textContent = (Number($("tej31-2")[0].textContent) * Number($("tej31-5")[0].textContent) / probTotal).toFixed(3);
+                $("tej31-r4")[0].textContent = (Number($("tej31-2")[0].textContent) * Number($("tej31-5")[0].textContent) / probTotal).toFixed(3) * 100;
+                $("tej31-r5")[0].textContent = (Number($("tej31-3")[0].textContent) * Number($("tej31-6")[0].textContent) / probTotal).toFixed(3);
+                $("tej31-r6")[0].textContent = (Number($("tej31-3")[0].textContent) * Number($("tej31-6")[0].textContent) / probTotal).toFixed(3) * 100;
+            }
+        }
+
+        
+    </script>
+</body>
+
+</html>

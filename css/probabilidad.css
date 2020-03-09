@@ -1,0 +1,93 @@
+.eggIt{
+    border-radius: 100%;
+}
+
+.tema1{
+    background-color: rgb(13,100,107,0.5);
+}
+
+.tema2{
+    background-color: rgb(22,56,58);
+}
+
+.tema3{
+    background-color: rgb(64,71,64);
+}
+
+.tema4{
+    background-color: rgb(186,142,115);
+}
+
+.tema5{
+    background-color: rgb(255,210,181);
+}
+
+.tema6{
+    background-color: rgb(22,56,58);
+}
+
+.tema7{
+    background-color: rgb(237,143,73);
+}
+
+.tema8{
+    background-color: rgb(226,120,18);
+}
+
+.tema9{
+    background-color: rgb(92,42,9);
+}
+
+.tema10{
+    background-color: rgb(46,22,18);
+}
+
+.tema1:hover{
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.tema2:hover{
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.tema3:hover{
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.tema4:hover{
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.tema5:hover{
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.tema6:hover{
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.tema7:hover{
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.tema8:hover{
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.tema9:hover{
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+.tema10:hover{
+    background-color: gainsboro;
+    cursor: pointer;
+}

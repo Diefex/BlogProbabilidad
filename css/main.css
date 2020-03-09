@@ -1,0 +1,92 @@
+body {
+    background-color: whitesmoke;
+}
+
+.navMain {
+    background-color: rgba(34, 39, 42, 1) !important;
+}
+
+.TextColorBackBlack {
+    color: white !important;
+}
+
+.TextColorBackWhite {
+    color: black !important;
+}
+
+.leftCol1 {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.rigthCol1 {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: blanchedalmond; overflow: auto;
+}
+
+.rigthCol {
+    background-color: white;
+    overflow: auto;
+}
+
+.itemHover{
+    background-color: rgba(34, 39, 42, 1);
+    color:  rgba(145, 149, 149, 1) !important;
+    color:  white !important;
+    font-size: 20px;
+    list-style-position:inside;
+    border: 1px solid white;
+    border-right: white 1px solid !important;
+    border-radius: 0px;
+}
+
+.itemHover:hover {
+    background-color: rgba(29, 33, 36, 1);
+    color:  rgba(145, 149, 149, 1) !important;
+    color:  white !important;
+    cursor: pointer;
+    list-style-position:inside;
+    border-color: black;
+    border-left: #8c1919 5px solid !important;
+}
+
+.contenedor{
+    box-shadow:0 30px 60px 30px rgba(0,0,0,1);
+}
+
+.leftCol{
+    background-color: rgba(34, 39, 42, 1);
+    overflow: auto;
+}
+
+ul{
+    border-left: #8c1919 2px solid;
+    border-radius: 0px !important;
+}
+
+ul li {
+    
+    border-left: none !important;
+    border-right: none !important;
+    list-style-position: inside;
+}
+
+.list-group-item:first-child {
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+  }
+  
+.list-group-item:last-child {
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+
+p{
+    font-size: 20px;
+    text-align:justify;
+}
+
+button{
+    background-color: #8c1919 !important;
+}

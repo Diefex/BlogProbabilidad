@@ -1,0 +1,32 @@
+
+
+.carrouselProbabilidad {
+    background-color: #aea76d94;
+    ;
+}
+
+.carrouselEstadistica {
+    background-color: #5a3663a1;
+}
+
+.carrouselTeoriaNumeros {
+    background-color: #6062c857;
+    ;
+}
+
+.cardBorder {
+    padding-top: 10px;
+}
+
+#navbarDropdownL {
+    color: black;
+}
+
+.buscaBotonNoBorder {
+    border: none;
+}
+
+.hoverIt:hover {
+    background-color: burlywood;
+    cursor: pointer;
+}
