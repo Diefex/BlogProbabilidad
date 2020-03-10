@@ -189,7 +189,7 @@
                             <h3>Definición</h3>
                                     <div class="border border-secondary p-2 rounded-lg"><p> Si la variable aleatoria X toma los valores x1, x2,...,xk, con idénticas probabilidades, entonces, la distribución uniforme discreta está dada por
                                     </p>
-                                    <img src="../img/FDistUniforme.png" alt="Formula Dist Uniforme" data-toggle="tooltip" data-placement="right" title="Tomado de Probabilidad Walpole 8°">
+                                    <img src="../img/FDistUniforme.png" alt="Formula Dist Uniforme" data-toggle="tooltip" data-placement="right" title="Tomado de Walpole, Ronald (2007) Probabilidad y Estadística para Ingeniería y Ciencias, Ciudad de México, MX : Pearson Educación de México, S.A. de C.V (Ed. 8)">
                                 </div>
                             <center>
                                 <img class="mt-5" src="../img/distUnifDiscreta.gif" alt="distUnifDiscreta" style="max-width: 50%;max-height: 50%;display: block;">
@@ -337,14 +337,37 @@
                     </div>
                     <div class="row" id="tema9">
                         <div class="col-lg-12">
-                            <h1 class="display-3">Distribución Hipergeómetrica<h1>
-                                <p>La manera más simple de ver la diferencia entre la distribución binomial de la sección 5.3 y la
-                                    distribución hipergeométrica está en la forma en que se realiza el muestreo. Los tipos de aplicaciones
-                                    de
-                                    la
-                                    distribución hipergeométrica son muy similares a los de la distribución binomial. Nos interesamos en el
-                                    cálculo de probabilidades para el número de observaciones que caen en una categoría especíﬁca</p>
-                                  <p>
+                            <h1 align="center" class="display-3">Distribución Hipergeómetrica<h1>
+                                    <br/>
+                                    <h2>Definición:</h2>
+                                <p align="center">La manera más simple de ver la diferencia entre la distribución binomial y la
+                                   distribución hipergeométrica está en la forma en que se realiza el muestreo. </p>
+                                <p align="center">Mientrás que en la binomial se requiere independencia entre las pruebas y por tanto el muestreo se debe efectuar <b>con reemplazo</b> de cada
+artículo después de que se observe, la distribución hipergeométrica no requiere independencia y se basa en el muestreo que se realiza <b>sin reemplazo</b>.</p>
+                                <div class="border border-secondary p-2 rounded-lg"><p>Se conoce como un <b>experimento hipergeométrico</b> a aquel que posee
+                                        las siguientes dos propiedades: <br/> <b>1.</b> Se selecciona una muestra aleatoria de tamaño <i>n</i> sin reemplazo de <i>N</i> artículos.<br>
+                                        <b>2.</b> <i>k</i> de los <i>N</i> artículos se pueden clasificar como éxitos y <i>N − k</i> se clasifican como fracasos.<br/>
+                                                El número <i>X</i> de éxitos de un experimento hipergeométrico se denomina <b>variable
+aleatoria hipergeométrica</b>. En consecuencia, la distribución de probabilidad de
+la variable hipergeométrica se llama <b>distribución hipergeométrica</b>, y sus valores
+se denotan como <i>h(x; N, n, k)</i>, debido a que dependen del número de éxitos <i>k</i> en el
+conjunto <i>N</i> del que seleccionamos <i>n</i> artículos.
+                                    </p>
+                                </div>
+                                <div class="border border-secondary p-2 rounded-lg"><p>La distribución de probabilidad de la variable aleatoria hipergeométrica <i>X</i>, el
+                                        número de éxitos en una muestra aleatoria de tamaño <i>n</i> que se selecciona de <i>N</i>
+                                        artículos, en los que <i>k</i> se denomina <b>éxito</b> y <i>N − k</i> <b>fracaso</b>, es
+                                        </p>
+                                        <img src="../img/FDistHiperG.png" alt="Formula Dist Hipergeometrica" data-toggle="tooltip" data-placement="right" title="Tomado de Walpole, Ronald (2007) Probabilidad y Estadística para Ingeniería y Ciencias, Ciudad de México, MX : Pearson Educación de México, S.A. de C.V (Ed. 8)" style="max-width:100%;width:auto;height:auto;">
+                                <p>El rango de <i>x</i> puede determinarse mediante los tres coeficientes binomiales en la
+                                    definición, donde <i>x</i> y <i>n − x</i> no son más que <i>k</i> y <i>N − k</i>; respectivamente; y ambas
+                                    no pueden ser menores que 0. Por lo general, cuando tanto <i>k</i> (el número de éxitos)
+                                    como <i>N − k</i> (el número de fracasos) son mayores que el tamaño de la muestra <i>n</i>, el
+                                    rango de una variable aleatoria hipergeométrica será <i>x =</i> 0, 1, . . . , <i>n</i>.</p>
+                                </div> <br/>
+                                <p align="center"> Los tipos de aplicaciones de la distribución hipergeométrica son muy similares a los de la distribución binomial, además de que se encuentran en muchas areas, con gran uso en muestreo de aceptación, pruebas electrónicas y garantía
+de calidad.</p><br/>
+                                 <p>
                             <button class="btn btn-dark my-2 my-sm-0" onclick="hider(7)"><b
                                     style="font-size: larger;">&larr; Anterior: Distribución Multinomial</b></button>
                             <button class="btn btn-dark my-2 my-sm-0" onclick="hider(10)"><b
@@ -417,7 +440,7 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body" style="text-align: justify; font-size: large;">
-                        Ejemplo 1.1 basado en el ejercicio propuesto 2.81 pagina 65 del libro Probabilidad y estadística
+                        Adaptado del ejercicio propuesto 2.81 pagina 65 del libro Probabilidad y estadística
                         para
                         ingeniería y ciencias de Ronald E. Walpole,Raymond H. Myers,Sharon L. Myers,Keying Ye -
                         editorial pearson octava edición 2007
@@ -511,7 +534,7 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
-                        basado en un ejercicio propuesto por Angelica Zavala y que se puede encontrar <a href="https://prezi.com/xfuncujnbdix/proceso-de-bernoulli/">aqui</a>
+                        Adaptado de un ejercicio propuesto por Angelica Zavala y que se puede encontrar <a href="https://prezi.com/xfuncujnbdix/proceso-de-bernoulli/">aqui</a>
                         <hr>
                         Se sabe que en una estación de Transmilenio 
                         <input type="text" value="60" style="width: 40px;"
