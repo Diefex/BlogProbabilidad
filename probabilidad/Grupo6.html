@@ -1,4 +1,4 @@
-﻿<html>
+<html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -37,6 +37,14 @@
             left: 0px;
             visibility: hidden;
         }
+	.display-3 decor-min-let.decor-min-let{
+	    font-size: 3.5rem;
+	}
+	.grafic{
+	margin:0 auto;
+	padding: 14px 16px;
+	background: rgb(50,125,125,0.3);
+	}
     </style>
 
 </head>
@@ -160,7 +168,7 @@
                         <div class="col-sm-12">
                             <div id="pageContent">
                                 <center>
-                                    <h1 class="display-3">Que es un espacio muestral?</h1>
+                                    <h1 class="display-3 decor-min-let">Que es un espacio muestral?</h1>
                                     <br>
                                     <p>Antes de definir que es un espacio muestral debemos conocer dos conceptos: <b>observación</b> y <b>experimento</b><br><br>
                                         Nos referiremos a cualquier registro de información, ya sea numérico o categórico, como una <b>observación</b>. <br><br>
@@ -180,7 +188,7 @@
                     </div>
                     <div class="row" id="tema1">
                         <div class="col-lg-12">
-                            <h1 class="display-3">Distribución Uniforme Discreta</h1>
+                            <h1 class="display-3 decor-min-let">Distribución Uniforme Discreta</h1>
                             <br />
                             <p>La más simple de todas las distribuciones de probabilidad discreta es aquella donde la variable
                                 aleatoria toma cada uno de sus valores con una probabilidad idéntica.
@@ -201,7 +209,7 @@
                     </div>
                     <div class="row" id="tema2">
                         <div class="col-lg-12">
-                            <h1 class="display-3">Ejemplos De Distribución Uniforme Discreta</h1>
+                            <h1 class="display-3 decor-min-let">Ejemplos De Distribución Uniforme Discreta</h1>
                             <br />
                             <h2>Ejemplos:</h2>
                             <br />
@@ -219,7 +227,7 @@
                     </div>
                     <div class="row" id="tema3">
                         <div class="col-lg-12">
-                            <h1 class="display-3">Proceso de Bernoulli</h1>
+                            <h1 class="display-3 decor-min-let">Proceso de Bernoulli</h1>
                             <br />
                             <h2>Definición:</h2>
                             <br />
@@ -245,7 +253,7 @@
                     </div>
                     <div class="row" id="tema4">
                         <div class="col-lg-12">
-                            <h1 class="display-3">Ejemplos del Proceso de Bernoulli</h1>
+                            <h1 class="display-3 decor-min-let">Ejemplos del Proceso de Bernoulli</h1>
                             <br />
                             <h2>Ejemplos:</h2>
                             <br />
@@ -263,27 +271,35 @@
                     </div>
                     <div class="row" id="tema5">
                         <div class="col-lg-12">
-                            <h1 class="display-3">Distribución Binomial</h1>
+                                                        <h1 class="display-3 decor-min-let">Distribuci&oacute;n Binomial</h1>
                             <br />
-                            <h2>Definición:</h2>
+                            <h2>Definici&oacute;n:</h2>
                             <br />
-                            <p>La distribución binomial deriva su nombre del hecho de que los n + 1 términos en la expansión binomial
-                                de
-                                (q + p)n corresponden a los diversos valores de b(x; n, p) para x = 0, 1, 2,...,n</p>
-                                <br />
-                                <center>
-                                    <img class="mt-5" src="../img/Binomial.jpg" alt="Binomial" style="max-width: 50%;max-height: 50%;display: block;">
-                                    tomado de: fisicaymates.com
-                                </center>
-                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(3)"><b
-                                    style="font-size: larger;">&larr; Anterior: Proceso de Bernoulli</b></button>
-                            <button class="btn btn-dark my-2 my-sm-0" onclick="hider(6)"><b
-                                    style="font-size: larger;">Siguiente: Ejemplos &rarr; </b></button>
+                            <div>
+                                <p>La distribuci&oacute;n binomial se refiere a una serie de n pruebas en las que cada prueba solo pueden resultar en uno de dos estados: p->exito, q->fracaso;
+                                    <br/>
+                                    Los n eventos deben ser independientes para poder aplicar la siguiente funcion de probabilidad:</p>
+                                    <br/>
+                                    <center>
+					<a href="https://www.codecogs.com/eqnedit.php?latex=f(x)=\binom{n}{x}p^{_{x}}(p-1)^{_{n-x}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f(x)=\binom{n}{x}p^{_{x}}(p-1)^{_{n-x}}" title="Funci&oacute;n de probabilidad" /></a>
+                                    </center>
+                                    <p>
+                                    	Al tener una variable aleatoria <b><i>X</i></b> cualquiera, que este definida en los n resultados de las n pruebas, la funcion de probabilidad es aplicable, y su grafica se ver&aacute;:
+                                    </p>
+                                    <center>
+                                        <img class="mt-5" src="../img/Binomial.jpg" alt="Binomial" style="max-width: 50%;max-height: 50%;display: block;">
+                                        tomado de: fisicaymates.com
+                                    </center>
+                                <button class="btn btn-dark my-2 my-sm-0" onclick="hider(3)"><b
+                                        style="font-size: larger;">&larr; Anterior: Proceso de Bernoulli</b></button>
+                                <button class="btn btn-dark my-2 my-sm-0" onclick="hider(6)"><b
+                                        style="font-size: larger;">Siguiente: Ejemplos &rarr; </b></button>
                         </div>
                     </div>
+                    </div> 
                     <div class="row" id="tema6">
                         <div class="col-lg-12">
-                            <h1 class="display-3">Ejemplos de Distribución Binomial</h1>
+                            <h1 class="display-3 decor-min-let">Ejemplos de Distribuci&oacute;n Binomial</h1>
                             <br />
                             <h2>Ejemplos:</h2>
                             <br />
@@ -291,17 +307,21 @@
                                 <li class="listaButtons">
                                     <button class="btn btn-secondary" data-toggle="modal" data-target="#ejemplo31"><b
                                             style="font-size: larger;">Ejemplo 1 &rarr;</b></button>
+									<button class="btn btn-secondary" data-toggle="modal" data-target="#ejemplo32"><b
+											style="font-size: larger;">Ejemplo 2 &rarr;</b></button>
+									<button class="btn btn-secondary" data-toggle="modal" data-target="#ejemplo33"><b
+											style="font-size: larger;">Ejemplo 3 &rarr;</b></button>
                                 </li>
                             </ul>
                             <button class="btn btn-dark my-2 my-sm-0" onclick="hider(5)"><b
-                                    style="font-size: larger;">&larr; Anterior: Definición </b></button>
+                                    style="font-size: larger;">&larr; Anterior: Definici&oacute;n </b></button>
                             <button class="btn btn-dark my-2 my-sm-0" onclick="hider(7)"><b
-                                    style="font-size: larger;">Siguiente: Distribución Multinomial &rarr; </b></button>
+                                    style="font-size: larger;">Siguiente: Distribuci&oacute;n Multinomial &rarr; </b></button>
                         </div>
                     </div>
                     <div class="row" id="tema7">
                         <div class="col-lg-12">
-                            <h1 class="display-3">Distribución Multinomial<h1>
+                            <h1 class="display-3 decor-min-let">Distribución Multinomial<h1>
                                 <p>El experimento binomial se convierte en un experimento multinomial si cada prueba tiene más de dos
                                     resultados posibles. Por ello, la clasiﬁ cación de un producto fabricado como ligero, pesado o
                                     aceptable,
@@ -319,7 +339,7 @@
                     </div>
                     <div class="row" id="tema8">
                         <div class="col-lg-12">
-                            <h1 class="display-3">Ejemplos de Distribución Multinomial<h1>
+                            <h1 class="display-3 decor-min-let">Ejemplos de Distribución Multinomial<h1>
                                 <br />
                                 <h2>Ejemplos:</h2>
                                 <br />
@@ -337,7 +357,7 @@
                     </div>
                     <div class="row" id="tema9">
                         <div class="col-lg-12">
-                            <h1 align="center" class="display-3">Distribución Hipergeómetrica<h1>
+                            <h1 align="center" class="display-3 decor-min-let">Distribución Hipergeómetrica<h1>
                                     <br/>
                                     <h2>Definición:</h2>
                                 <p align="center">La manera más simple de ver la diferencia entre la distribución binomial y la
@@ -376,13 +396,13 @@ de calidad.</p><br/>
                     </div>
                     <div class="row" id="tema10">
                         <div class="col-lg-12">
-                            <h1 class="display-3">Ejemplos de Distribución Hipergeómetrica<h1>
+                            <h1 class="display-3 decor-min-let">Ejemplos de Distribución Hipergeómetrica<h1>
                                 <br />
                                 <h2>Ejemplos:</h2>
                                 <br />
                                 <ul>
                                     <li class="listaButtons">
-                                        <button class="btn btn-secondary" data-toggle="modal" data-target="#ejemplo31"><b
+                                        <button class="btn btn-secondary" data-toggle="modal" data-target="#ejemplo51"><b
                                                 style="font-size: larger;">Ejemplo 1 &rarr;</b></button>
                                     </li>
                                 </ul>
@@ -394,7 +414,7 @@ de calidad.</p><br/>
                     </div>
                     <div class="row" id="tema11">
                         <div class="col-lg-12">
-                            <h1 class="display-3">Distribución Binomial Negativa<h1>
+                            <h1 class="display-3 decor-min-let">Distribución Binomial Negativa<h1>
                                 <p>El número X de pruebas que genera k éxitos en un experimento binomial negativo se llama variable
                                     aleatoria
                                     binomial negativa y su distribución de probabilidad se llama distribución binomial negativa.</p>
@@ -407,7 +427,7 @@ de calidad.</p><br/>
                     </div>
                     <div class="row" id="tema12">
                         <div class="col-lg-12">
-                            <h1 class="display-3">Ejemplos de Distribución Binomial Negativa<h1>
+                            <h1 class="display-3 decor-min-let">Ejemplos de Distribución Binomial Negativa<h1>
                                 <br />
                                 <h2>Ejemplos:</h2>
                                 <br />
@@ -578,120 +598,175 @@ de calidad.</p><br/>
 
                 </div>
             </div>
-        </div>
-        <div class="modal" id="ejemplo31">
+        </div><div class="modal" id="ejemplo31" onmouseover="calculoEj31();">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Teorema de bayes - Ejemplo 1</h4>
+                        <h4 class="modal-title">Distribuci&oacute;n binomial - ejemplo 1</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body" style="overflow: auto; font-weight: normal;">
+                        Ejemplo 3 - autor&iacute;a https://www.vadenumeros.es/sociales/ejemplos-distribucion-binomial.htm
+                        <hr>
+                        En un colegio publico de la localidad de engativa (Bogot&aacute;) existe una probabilidad del
+                        <input type="text" id="tej31-1" value="30" style="width: 40px;"
+                            onchange="calculoEj31()"
+                            autocomplete="off" onkeyup="this.value=this.value.replace(/[^\d.]/,'')" title="Si desea modificar: introduzca una probabilidad entre 0 y 100 %"/>%
+                        de que un alumno de 7mo grado repruebe el curso.
+			<br/>
+			Si se toman
+                        <input type="text" id="tej31-2" value="20" style="width: 40px;"
+                            onchange="calculoEj31()"
+                            autocomplete="off" onkeyup="this.value=this.value.replace(/[^\d.]/,'')" title="Si desea modificar: introduzca un numero entre 10 y 40 estudiantes"/>
+			             estudiantes de grado 7mo, y se quiere calcular la probabilidad de que
+                        <input type="text" id="tej31-3" value="4" style="width: 40px;"
+                            onchange="calculoEj31()"
+                            autocomplete="off" onkeyup="this.value=this.value.replace(/[^\d.]/,'')" title="Si desea modificar: introduzca un numero menor a 20 estudiantes"/>
+			                 de estos reprueben el curso. Obtenemos que:
+                        <br>
+                        <div id="sol-tej31">
+                        </div>
+                        <br>
+                        <br>
+                        As&iacute; obtenemos una grafica discreta que nos muestra la distribucion de probabilidad:
+						<div><center>
+							<canvas id="gra-tej31" class="grafic"></canvas>
+                        </center></div>
+                        </div>
+						</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<div class="modal" id="ejemplo32" onmouseover="calculoEj32()">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Distribuci&oacute;n binomial - Ejemplo 2</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body" style="overflow: auto; font-weight: normal;">
+                        Ejercicio 2 - autor&iacute;a https://www3.uji.es/~mateu/t4-alumnos.pdf
+                        <hr>
+                        En la sala 504 (un aula de computacion de la Universidad Distrital Francisco Jos&eacute; de Caldas), hay un total de
+                        <input type="text" id="tej32-1" value="24" style="width: 40px;"
+                            onchange="calculoEj32()"
+                            autocomplete="off" onkeyup="this.value=this.value.replace(/[^\d.]/,'')" title="Si desea modificar: introduzca un numero mayor a 20"/>
+							 computadores para uso academico de los estudiantes.
+						Si se sabe que el 12% de los estudiantes que piden un computador lo usan con fines no academicos, y un dia en particular lo piden  
+                        <input type="text" id="tej32-2" value="20" style="width: 40px;"
+                            onchange="calculoEj32()"
+                            autocomplete="off" onkeyup="this.value=this.value.replace(/[^\d.]/,'')" title="Si desea modificar: introduzca un numero entre 5 y 24 estudiantes"/>
+			             estudiantes ¿Cu&aacute;l es la probabilidad de que menos de <label id="lb32-1">20</label> estudiantes esten utilizando inadecuadamente los computadores?
+                        <br>
+                        <div id="sol-tej32">
+                        </div>
+                        <br>
+                        <br>
+                        As&iacute; obtenemos una grafica discreta que nos muestra la distribucion de probabilidad:
+						<div><center>
+							<canvas id="gra-tej32-1" class="grafic"></canvas>
+							<canvas id="gra-tej32-2" class="grafic"></canvas>
+                        </center></div>
+                        </div>
+						</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="modal" id="ejemplo33" onmouseover="calculoEj33()">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Distribuci&oacute;n binomial - Ejemplo 3</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body" style="overflow: auto; font-weight: normal;">
+                        Pensamiento poco Convencional - autor&iacute;a prop&iacute;a
+                        <hr>
+                        Se tiene un dado cargado, de manera que 5 de sus lados se pueden considerar justos, mientras su otro lado esta ama&ntilde;ado,
+						Se realizan 50 intentos, obteniendo 27 caras justas. Si previo al experimento se decia que 3 de cada 5 intentos cae la cara injusta del dado
+						¿Cuál era la probabilidad de que el experimento resultara como result&pacute;?
+						<hr>
+                        An&aacute;lisis:
+						<br/>
+						Tras analizar el enunciado, rellene los campos debajo segun la pregunta.
+						<li>Segun el enunciado, rellene los campos con "n", "p", "q" o "x", segun como hallan interpretado que se podrian usar los datos en la formula:
+						<ul>
+						Los 50 lanzamientos <input type="text" id="tej33-1" value="" style="width: 40px;"
+                            onchange="calculoEj33()"
+                            autocomplete="off" title="Piense en como se usara el numero de lanzamientos en la formula."/>
+						</ul>
+						<ul>
+						Los 27 resultados obtenidos <input type="text" id="tej33-2" value="" style="width: 40px;"
+                            onchange="calculoEj33()"
+                            autocomplete="off" title="Piense en como se usara el numero de caras injustas obtenidas en la formula, recuerde que en la practica 27 ser&iacute;a un supuesto"/>
+						</ul>
+						<ul>
+						Los 23 resultados obtenidos como cara injusta <input type="text" id="tej33-3" value="" style="width: 40px;"
+                            onchange="calculoEj33()"
+                            autocomplete="off" title="Piense en como se usara el numero de caras injustas obtenidas en la formula, recuerde que en la practica 23 ser&iacute;a un supuesto"/>
+						</ul>
+						<ul>
+						La afirmacion 3 de cada 5 intentos cae cara injusta <input type="text" id="tej33-4" value="" style="width: 40px;"
+                            onchange="calculoEj33()"
+                            autocomplete="off" title="Piense en como se usara esta tendencia en la formula"/>
+						</ul>
+						</li>
+						<li>La probabilidad p que se debera usar en la formula, segun el enunciado, es: <input type="text" id="tej33-4" value="" style="width: 40px;"
+                            onchange="calculoEj33()"
+                            autocomplete="off" title="Rellene con un decimal, con punto como separador decimal."/>
+						</li>
+						<li>Ingrese "verdadero" o "falso" segun considere:
+						<ul>
+						No se usa sumatoria en la formula porque se quiere calcular el caso concreto en que caigan x veces cara injusta no la posibilidad que caiga x o menos veces. <input type="text" id="tej33-5" value="" style="width: 40px;"
+                            onchange="calculoEj33()"
+                            autocomplete="off" title="ingrese verdadero o falso en mayusculas"/>
+						</ul>
+						<ul>
+						Los eventos son independientes porque cada lanzamiento del dado no influye a ninguno de los siguientes. <input type="text" id="tej33-6" value="" style="width: 40px;"
+                            onchange="calculoEj33()"
+                            autocomplete="off" title="ingrese verdadero o falso en mayusculas"/>
+						</ul>
+						<ul>
+						Al tener k caras el dado, no cuenta como binomial. <input type="text" id="tej33-7" value="" style="width: 40px;"
+                            onchange="calculoEj33()"
+                            autocomplete="off" title="ingrese verdadero o falso en mayusculas"/>
+						</ul>
+						<ul>
+						La probabilidad real ser&aacute; uno menos laformula, porque queremos el numero de veces que cae la cara injusta y no los demas resultados. <input type="text" id="tej33-8" value="" style="width: 40px;"
+                            onchange="calculoEj33()"
+                            autocomplete="off" title="ingrese verdadero o falso en mayusculas"/>
+						</ul>
+						</li>
+						<hr>
+						Si respondio correctamente la respuesta aparecerá:
+                        <div id="sol-tej33">
+                        </div>
+                        </div>
+						</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal" id="ejemplo51">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Teorema de bayes - ejemplo 1</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body" style="overflow: auto;">
-                        Ejemplo 2.1 - autoría propia
+                        Ejemplo 2.1 - autor&iacute;a propia
                         <hr>
-                        El famoso juego de Pokémon Go distribuye en una zona pokemones de tipo fuego, agua y planta, En
-                        esta zona la probabilidad de obtener un pokémon de tipo fuego, agua o planta es de
-                        <input type="text" value="30" style="width: 40px;"
-                            onchange="var a= this.value; $('tej31-1').each(function(i){this.textContent = a/100}); calculoEj31()"
-                            autocomplete="off" onkeyup="this.value=this.value.replace(/[^\d.]/,'')" />%
-                        ,
-                        <input type="text" value="20" style="width: 40px;"
-                            onchange="var a= this.value; $('tej31-2').each(function(i){this.textContent = a/100}); calculoEj31()"
-                            autocomplete="off" onkeyup="this.value=this.value.replace(/[^\d.]/,'')" />%
-                        y
-                        <input type="text" value="50" style="width: 40px;"
-                            onchange="var a= this.value; $('tej31-3').each(function(i){this.textContent = a/100}); calculoEj31()"
-                            autocomplete="off" onkeyup="this.value=this.value.replace(/[^\d.]/,'')" />%
-                        respectivamente.
-                        <br>
-                        <b>P(T1)=<tej31-1>0.30</tej31-1>, P(T2)=<tej31-2>0.20</tej31-2>, P(T3)=<tej31-3>0.50</tej31-3>
-                            .</b>
-                        <br>
-                        La posibilidad de que un pokémon salga repetido según su tipo es de:
-                        <br>
-                        <b>
-                            P(R|T1)=<tej31-4>0.1</tej31-4>, <tej31-5>0.3</tej31-5>, P(R|T3)=<tej31-6>0.2</tej31-6>.
-                        </b>
-                        <br>
-                        Si en medio de la partida aparece un pokémon salvaje, repetido, que probabilidad hay de que sea
-                        tipo fuego, agua o planta:
-
-                        <br>
-                        <hr>
-                        Aplicamos el teorema de bayes para cada caso:
-                        <hr>
-                        <br>
-                        1. de que salga un pokemón tipo fuego
-                        <br>
-                        P(T1|R)=<div class="frac">
-                            <span>P(T1)P(R|T1)</span>
-                            <span class="symbol">/</span>
-                            <span class="bottom">P(T1)P(R|T1)+P(T2)P(R|T2)+P(T3)P(R|T3)</span>
-                        </div>
-                        <br>
-                        <br>
-                        P(T1|R)=<div class="frac">
-                            <span>(<tej31-1>0.30</tej31-1>)(<tej31-4>0.1</tej31-4>)</span>
-                            <span class="symbol">/</span>
-                            <span class="bottom">(<tej31-1>0.30</tej31-1>)(<tej31-4>0.1</tej31-4>)(<tej31-2>0.20
-                                </tej31-2>+<tej31-5>0.3</tej31-5>)+(<tej31-3>0.50</tej31-3>)(<tej31-6>0.2</tej31-6>
-                                )</span>
-                        </div>
-                        <br>
-                        <br>
-                        P(T1|R)=<div class="frac">
-                            <span>0.03</span>
-                            <span class="symbol">/</span>
-                            <span class="bottom">
-                                <tej31-7>0.19</tej31-7>
-                            </span>
-                        </div>
-                        <br><b>
-                            P(T1|R)=<tej31-r1>0.158</tej31-r1>=<tej31-r2>15.8</tej31-r2>% (probabilidad de que sea un
-                            pokemón tipo fuego)</b>
-                        <br>
-                        <hr>
-                        2. de que salga un pokemón tipo agua
-                        <br>
-                        P(T1|R)=<div class="frac">
-                            <span>P(T1)P(R|T1)</span>
-                            <span class="symbol">/</span>
-                            <span class="bottom">P(T1)P(R|T1)+P(T2)P(R|T2)+P(T3)P(R|T3)</span>
-                        </div>
-                        <br>
-                        <br>
-                        P(T1|R)=<div class="frac">
-                            <span>(<tej31-2>0.20</tej31-2>)(<tej31-5>0.03</tej31-5>)</span>
-                            <span class="symbol">/</span>
-                            <span class="bottom">
-                                <tej31-7>0.19</tej31-7>
-                            </span>
-                        </div>
-                        <br>
-                        <br><b>
-                            P(T1|R)=<tej31-r3>0.316</tej31-r3>=<tej31-r4>31.6</tej31-r4>% (probabilidad de que sea un
-                            pokemón tipo agua)</b>
-                        <hr>
-                        3. de que salga un pokemón tipo planta
-                        <br>
-                        P(T1|R)=<div class="frac">
-                            <span>P(T1)P(R|T1)</span>
-                            <span class="symbol">/</span>
-                            <span class="bottom">P(T1)P(R|T1)+P(T2)P(R|T2)+P(T3)P(R|T3)</span>
-                        </div>
-                        <br>
-                        <br>
-                        P(T1|R)=<div class="frac">
-                            <span>(<tej31-3>0.50</tej31-3>)(<tej31-6>0.02</tej31-6>)</span>
-                            <span class="symbol">/</span>
-                            <span class="bottom">
-                                <tej31-7>0.19</tej31-7>
-                            </span>
-                        </div>
-                        <br>
-                        <br><b>
-                            P(T1|R)=<tej31-r5>0.526</tej31-r5>=<tej31-r6>52.6</tej31-r6>% (probabilidad de que sea un
-                            pokemón tipo agua)</b>
+                        <iframe width="700" height="507" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=70227D8CC1C7436B%2113691&authkey=%21APM5KKLgEtUC8to&em=2&wdAllowInteractivity=False&AllowTyping=True&Item='Hoja1'!B2%3AQ24&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True"></iframe>
                     </div>
 
                     <div class="modal-footer">
@@ -705,14 +780,12 @@ de calidad.</p><br/>
                 </div>
             </div>
         </div>
+	</div>
     </div>
     <!--<footer class="page-footer font-small blue">
-
         <div class="footer-copyright text-center py-3">
             <b>© 2020 Carlos Lopez</b>
-
         </div>
-
     </footer>-->
 
     <script src="../js/jQuery.js"></script>
@@ -726,10 +799,42 @@ de calidad.</p><br/>
             $('[data-toggle="tooltip"]').tooltip()
         })
 
+        function factorial (n) {
+        	if (n == 0){
+        		return 1;
+        	}
+        	return n * factorial (n-1);
+        }
         function calculoEj11() {
             $("res11-1")[0].textContent = (Number($("tej11-3")[0].textContent) / Number($("tej11-1")[0].textContent)).toFixed(2);
         }
-
+        function drawLine(ctx, startX, startY, endX, endY,color){
+            ctx.save();
+            ctx.beginPath();
+            ctx.strokeStyle = color;
+            ctx.moveTo(startX,startY);
+            ctx.lineTo(endX,endY);
+            ctx.stroke();
+            ctx.restore();
+        }
+		function drawEjes(ctx, canv, color){
+		drawLine(
+			ctx,
+			0,
+			canv.height,
+			canv.width,
+			canv.height,
+			color
+		);
+		drawLine(
+			ctx,
+			0,
+			canv.height,
+			0,
+			0,
+			color
+		);
+		}
         function calculoEj21() {
             if ((Number($("tej21-1")[0].textContent) + Number($("tej21-2")[0].textContent) + Number($("tej21-3")[0].textContent)).toFixed(2) != 1) {
                 alert("la suma de los campos debe ser 100%");
@@ -743,23 +848,122 @@ de calidad.</p><br/>
             }
 
         }
-
-        function calculoEj31() {
-            if ((Number($("tej31-1")[0].textContent) + Number($("tej31-2")[0].textContent) + Number($("tej31-3")[0].textContent)).toFixed(2) != 1) {
-                alert("la suma de los campos debe ser 100%");
-            } else {
-                var probTotal = 0;
-                for (var i = 1; i <= 3; i++) {
-                    probTotal += Number($("tej31-" + i)[0].textContent) * Number($("tej31-" + (i + 3))[0].textContent);
-                }
-                $("tej31-7")[0].textContent = probTotal;
-                $("tej31-r1")[0].textContent = (Number($("tej31-1")[0].textContent) * Number($("tej31-4")[0].textContent) / probTotal).toFixed(3);
-                $("tej31-r2")[0].textContent = (Number($("tej31-1")[0].textContent) * Number($("tej31-4")[0].textContent) / probTotal).toFixed(3) * 100;
-                $("tej31-r3")[0].textContent = (Number($("tej31-2")[0].textContent) * Number($("tej31-5")[0].textContent) / probTotal).toFixed(3);
-                $("tej31-r4")[0].textContent = (Number($("tej31-2")[0].textContent) * Number($("tej31-5")[0].textContent) / probTotal).toFixed(3) * 100;
-                $("tej31-r5")[0].textContent = (Number($("tej31-3")[0].textContent) * Number($("tej31-6")[0].textContent) / probTotal).toFixed(3);
-                $("tej31-r6")[0].textContent = (Number($("tej31-3")[0].textContent) * Number($("tej31-6")[0].textContent) / probTotal).toFixed(3) * 100;
-            }
+    function calcularBinomio(p, n, x){
+        return ((factorial(n)/(factorial(x)*(factorial(n-x))))*(Math.pow(p,x))*(Math.pow(1-p,n-x))).toString();
+    }
+	function calculoEj31(){
+	    var tej311=document.getElementById("tej31-1");
+	    var tej312=document.getElementById("tej31-2");
+	    var tej313=document.getElementById("tej31-3");
+	    var soltej31=document.getElementById("sol-tej31");
+        if (parseInt(tej311.value) > 100 || parseInt(tej311.value)<0) {
+		alert("la probabilidad de reprobar el curso debe ser menor a 100% pero mayor al 0%");
+		tej311.value=30;
+	    }
+	    if (parseInt(tej312.value) > 40 || parseInt(tej312.value)<10) {
+	    	alert("el numero de estudiantes debe estar entre 10 y 40");
+	    	tej312.value=20;
+	    }
+	    if (parseInt(tej313.value) > parseInt(tej312.value) || parseInt(tej313.value)<0) {
+	    	alert("el numero de estudiantes a calcular debe ser mayor a 0 y menor al numero de muestra");
+	    	tej313.value=0;
+	    }
+	    tej313.title="introduzca un numero menor a " + tej312.value + " estudiantes";
+        soltej31.innerHTML="Aplicando la funcion de probabilidad para una distribucion binomial tenemos que:"+
+        "<center>"+
+        "<a href='https://www.codecogs.com/eqnedit.php?latex=P(x="+ tej313.value +")=\\binom{" + tej312.value +
+        "}{" + tej313.value+"}"+ parseFloat(tej311.value/100).toString()+"^{_{"+tej313.value+"}}(1-"+
+        parseFloat(tej311.value/100).toString() +")^{_{"+tej312.value+"-"+tej313.value+"}}' target=_blank'>"+
+		"<img src='https://latex.codecogs.com/gif.latex?P(x="+ tej313.value +")=\\binom{" + tej312.value +
+        "}{" + tej313.value+"}"+ parseFloat(tej311.value/100).toString()+"^{_{"+tej313.value+"}}(1-"+
+        parseFloat(tej311.value/100).toString() +")^{_{"+tej312.value+"-"+tej313.value+"}}'/></a>"+
+        " = " +(calcularBinomio(parseInt(tej311.value)/100,parseInt(tej312.value),parseInt(tej313.value))).toString()+
+        "</center>";
+        var grafej31 = document.getElementById("gra-tej31");
+        grafej31.width = 300;
+        grafej31.height = 300;
+        var funcej31 = grafej31.getContext("2d");
+		drawEjes(funcej31,grafej31,"#ff0000");
+        for (var i = 0; i<parseInt(tej312.value); i++){
+            var col = "#000000";
+            var cordX = grafej31.width/parseInt(tej312.value);
+			if (i==parseInt(tej313.value)){col="#ff0000"}
+            drawLine(
+                funcej31,
+                i*cordX,
+                300,
+                i*cordX,
+                ((1)-calcularBinomio(parseInt(tej311.value)/100,parseInt(tej312.value),i))*grafej31.height*(1),
+                col
+            );
+        }
+        }
+	function calculoEj32(){
+	    var tej321=document.getElementById("tej32-1");
+	    var tej322=document.getElementById("tej32-2");
+	    var soltej32=document.getElementById("sol-tej32");
+        if (parseInt(tej321.value)<20) {
+		alert("El numero de computadores en la sala debe ser superior");
+		tej321.value=24;
+	    }
+	    if (parseInt(tej322.value) > parseInt(tej321.value) || parseInt(tej322.value)<5){
+	    	alert("el numero de estudiantes a calcular debe ser mayor a 5 y menor al numero de computadores");
+	    	tej322.value=20;
+	    }
+	    tej322.title="Si desea modificar: introduzca un numero entre 5 y" + tej321.value + "estudiantes";
+		document.getElementById("lb32-1").innerHTML=tej322.value;
+		var sol = 0;
+		var grafej321 = document.getElementById("gra-tej32-1");
+		var grafej322 = document.getElementById("gra-tej32-2");
+        grafej321.width = 300;
+        grafej321.height = 300;
+		grafej322.width = 300;
+		grafej322.height = 300;
+        var funcej321 = grafej321.getContext("2d");
+		var funcej322 = grafej322.getContext("2d");
+		drawEjes(funcej321, grafej321, "#ff0000");
+		drawEjes(funcej322, grafej322, "#ff0000");
+		var pTot=0;
+		for (var i = 1; i<parseInt(tej321.value); i++){
+			var col = "#000000";
+            var cordX = grafej322.width/parseInt(tej321.value);
+			var sum = parseFloat(calcularBinomio(12/100,parseInt(tej321.value),i));
+			if (i==parseInt(tej322.value)){col="#ff0000"}
+            drawLine(
+                funcej321,
+                i*cordX,
+                grafej321.height,
+                i*cordX,
+                ((1)-sum)*grafej321.height*(1),
+                col
+            );
+			if (i<=parseInt(tej322.value)){
+				var cordX = grafej322.width/parseInt(tej322.value);
+				sol += (sum);
+				pTot += parseFloat(sum);
+				drawLine(
+					funcej322,
+					i*cordX,
+					grafej322.height,
+					i*cordX,
+					(pTot)*grafej322.height*(1),
+					col
+				);
+			}
+		}
+		sol = 1-sol;
+        soltej32.innerHTML="Aplicando la funcion de probabilidad para una distribucion binomial tenemos que:"+
+        "<center>"+
+        "<a href='https://www.codecogs.com/eqnedit.php?latex=1-P(x<"+ tej322.value +")=1-\\sum_{i=0}^{"+ tej322.value +"}\\binom{" + tej321.value +
+        "}{i}0.12^{_{i}}("+
+        "1-0.12)^{_{"+tej321.value+"-i}}' target=_blank'>"+
+		"<img src='https://latex.codecogs.com/gif.latex?1-P(x<"+ tej322.value +")=1-\\sum_{i=0}^{"+ tej322.value +"}\\binom{" + tej321.value +
+        "}{i}0.12^{_{i}}("+
+        "1-0.12)^{_{"+tej321.value+"-i}}'/></a>"+
+        " = " + sol.toString() +
+        "</center>";
+	}
+	function calculoEj33(){
         }
 
         
